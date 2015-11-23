@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Mon Nov 23 15:51:44 EST 2015
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=MahniShayganfar-HRI2016.tex
+outputFile=MahniShayganfar-HRI2016.pdf
+langSpell=en
+markDer=true
+srcDir=
