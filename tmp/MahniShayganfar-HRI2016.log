@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  23 NOV 2015 16:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  30 NOV 2015 12:46
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -132,9 +132,9 @@ LaTeX Font Info:    ... okay on input line 315.
 
 -- Lines per column: 56 (exact).
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 368.
+(Font)              <7> on input line 369.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 368.
+(Font)              <5> on input line 369.
 (./MahniShayganfar-HRI2016.bbl)
 
 ** Conference Paper **
@@ -154,11 +154,11 @@ Before submitting the final camera ready copy, remember to:
 ]
 (./MahniShayganfar-HRI2016.aux) ) 
 Here is how much of TeX's memory you used:
- 1058 strings out of 493304
- 19463 string characters out of 6139871
+ 1056 strings out of 493304
+ 19448 string characters out of 6139871
  73946 words of memory out of 5000000
  4582 multiletter control sequences out of 15000+600000
- 36806 words of font info for 66 fonts, out of 8000000 for 9000
+ 34592 words of font info for 64 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  26i,7n,19p,218b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips
@@ -167,7 +167,7 @@ Here is how much of TeX's memory you used:
 are/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on MahniShayganfar-HRI2016.pdf (1 page, 51581 bytes).
+Output written on MahniShayganfar-HRI2016.pdf (1 page, 49141 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream

@@ -21,9 +21,8 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{gratch:emotion-consequences}
-J.~Gratch, S.~Marsella, and P.~Petta, ``Modeling the cognitive antecedents and
-  consequences of emotion,'' \emph{Cognitive System Research}, vol.~10, no.~1,
-  pp. 1--5, 2009.
+\bibitem{franklin:artificial-minds}
+S.~Franklin, \emph{Artificial Minds}, ser. A Bradford book.\hskip 1em plus
+  0.5em minus 0.4em\relax MIT Press, 1997.
 
 \end{thebibliography}
