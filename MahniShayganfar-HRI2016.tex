@@ -310,6 +310,10 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 \usepackage{tikz}
+\usetikzlibrary{arrows,positioning,automata}
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithm}
+\usepackage{enumitem, kantlipsum}
 
 \begin{document}
 %
@@ -432,6 +436,16 @@ could have been predicted from causal interpretation of an event, and d)
 influenced, and it is associated with a robot's ability to cope with an
 appraised event in a collaborative environment.
 
+\begin{figure}[tbh]
+  \centering
+  \includegraphics[width=0.40\textwidth]{figure/ActionSelection-croped.pdf}
+  \vspace*{-2mm}
+  \caption{{\fontsize{9}{9}\selectfont Using coping strategies (action
+  selection schemas) to select appropriate goal.}}
+  \label{fig:actionSelection}
+  \vspace*{-7mm}
+\end{figure}
+
 The outcome of each appraisal process is a specific value for the corresponding
 appraisal variable. The vector containing these appraisal variables can be
 mapped to a particular emotion instance at each point in time. For instance, a
@@ -459,7 +473,6 @@ processes can lead the robot to choose between the available \textit{live}
 goals; since the appraisals are the immediate outcome of the robot's assessment
 of the collaboration environment. 
 
-\vspace*{-4mm}
 \begin{figure}[tbh]
   \centering
   \includegraphics[width=0.45\textwidth]{figure/collaborationStructure-croped.pdf}
@@ -485,18 +498,30 @@ robot to skip cheking the connector, since she wants to do it? Now, the robot
 requires to choose between the other two goals. And, what if the astronaut fails
 to check the connector and becomes furstrated while the robot has already
 achieved the other two goals? How does the robot need to respond to the
-astronaut's negative emotion?
+astronaut's negative emotion? or any emotion?
 
-\vspace*{-3mm}
-\begin{figure}[tbh]
-  \centering
-  \includegraphics[width=0.40\textwidth]{figure/ActionSelection-croped.pdf}
-  \vspace*{-2mm}
-  \caption{{\fontsize{9}{9}\selectfont Using coping strategies (action
-  selection schemas) to select appropriate goal.}}
-  \label{fig:actionSelection}
-\end{figure}
-\vspace*{-4mm}
+Algorithm \ref{alg:action-selection} shows how our collaborative robot can
+choose between the available goals.
+
+\begin{algorithm}
+	\caption{(Action Selection)}
+	\label{alg:action-selection}
+	\begin{algorithmic}[1]
+		\Function{whatIsNext}{Event $\varepsilon_t$}
+			\Statex
+			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+			\Statex
+			\State $\mathcal{U} \gets \Call{getEventUtility}{\mathit{g}_{t}}$ 
+			\State $\tau_{t} \gets \Call{getEmotionalThreshold}{\mathit{g}_{t}}$
+			\Statex
+			\If {$( \mathcal{U} \geq \tau_{t} )$}
+				\State \Return {{\fontsize{7}{8}\selectfont RELEVANT}}
+			\Else
+				\State \Return {{\fontsize{7}{8}\selectfont IRRELEVANT}}
+			\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
