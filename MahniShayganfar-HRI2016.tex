@@ -407,8 +407,45 @@ For an intelligent agent to convey appropriate behavior, its actions should be
 chosen based on an accurate evaluation of the environment
 \cite{franklin:artificial-minds}.
 
+\section{Background}
+
 \section{Contribution}
 
+In this paper, we focus on small part of a larger architecture framework
+built based on our \textit{Affective Motivational Collaboration Theory}
+\cite{shayganfar:amct-symbiotic}, \cite{shayganfar:emotional-awareness}. First,
+we investigated the influence of a collaboration structure on appraisal
+processes \cite{shayganfar:appraisal}, and now we are investigating the
+influence of appraisal on collaboration structure (see Figure
+\ref{fig:actionSelection}).
+
+In the first part of our work, we implemented distinct algorithms for different
+appraisal processes for a collaborative robot. According to the appraisal
+theory, the outcome of these processes are separable antecedents of emotion with
+which the robot evaluates the environment. Our appraisal variables included: a)
+\textit{relevance} used to measure the significance of an event for the robot,
+b) \textit{desirability} to characterize the value of an event to the robot
+in terms of whether the event facilitates or thwarts the collaboration goal, c)
+\textit{expectedness} indicating the extent to which the truth value of a state
+could have been predicted from causal interpretation of an event, and d)
+\textit{controllability} indicating the extent to which an event can be
+influenced, and it is associated with a robot's ability to cope with an
+appraised event in a collaborative environment.
+
+The outcome of each appraisal process is a specific value for the corresponding
+appraisal variable. The vector containing these appraisal variables can be
+mapped to a particular emotion instance at each point in time. For instance, a
+\textit{relevant, undesirable, expected}, and \textit{uncontrollable} event can
+elicit \textit{anger} in an individual. However, it is not the actual emotion
+instance that is important for us. In fact, it is a) the functions of emotions
+in a social setting, e.g., \textit{action selection}, and b) the meaning of
+the collabrator's perceived emotion that we are interested to investigate in
+collaboration context.
+
+In our current work, we are investigating how appraisal can influence the
+\textit{action selection} process during collaboration. The action selection
+process should provide the most appropriate action out of repertoire of possible
+actions.
 
 \begin{figure}[tbh]
   \centering

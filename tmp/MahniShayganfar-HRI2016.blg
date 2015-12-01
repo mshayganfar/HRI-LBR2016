@@ -13,44 +13,44 @@ Database file #1: mshayganfar.bib.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 3 entries,
+You've used 6 entries,
             4024 wiz_defined-function locations,
-            826 strings with 7699 characters,
-and the built_in function-call counts, 1804 in all, are:
-= -- 150
-> -- 27
+            839 strings with 8238 characters,
+and the built_in function-call counts, 3209 in all, are:
+= -- 249
+> -- 66
 < -- 13
-+ -- 16
-- -- 4
-* -- 92
-:= -- 314
-add.period$ -- 6
-call.type$ -- 3
-change.case$ -- 2
++ -- 34
+- -- 13
+* -- 155
+:= -- 541
+add.period$ -- 12
+call.type$ -- 6
+change.case$ -- 5
 chr.to.int$ -- 30
-cite$ -- 3
-duplicate$ -- 121
-empty$ -- 142
-format.name$ -- 5
-if$ -- 389
+cite$ -- 6
+duplicate$ -- 243
+empty$ -- 297
+format.name$ -- 17
+if$ -- 710
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 21
-newline$ -- 32
-num.names$ -- 3
-pop$ -- 42
+int.to.str$ -- 6
+missing$ -- 46
+newline$ -- 41
+num.names$ -- 6
+pop$ -- 114
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 142
+skip$ -- 254
 stack$ -- 0
-substring$ -- 72
-swap$ -- 97
+substring$ -- 75
+swap$ -- 162
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 3
+type$ -- 6
 warning$ -- 0
-while$ -- 7
-width$ -- 4
-write$ -- 50
+while$ -- 10
+width$ -- 7
+write$ -- 74
