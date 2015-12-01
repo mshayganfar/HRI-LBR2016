@@ -445,15 +445,58 @@ collaboration context.
 In our current work, we are investigating how appraisal can influence the
 \textit{action selection} process during collaboration. The action selection
 process should provide the most appropriate action out of repertoire of possible
-actions.
+actions. A collaboration structure provides a hierarchy and the constraints of
+the shared goals in the form of a shared plan (Figure \ref{fig:taskModel}).
+Therefore, a shared plan contains both the robot and human collaborator's goals.
+The robot takes actions with respect to the goals of which the robot is
+responsible for in the shared plan. However, there can be several goals
+available for the robot to pursue at each point in time during collaboration.
+In other words, any ``live'' goal can be pursued by the robot. A goal is
+\textit{live} if all of its predecessors are \textit{achieved} and all of its
+preconditions are \textit{satisfied}. Therefore, a collaborative robot requires
+a mechanism to choose between a set of \textit{live} goals. We believe appraisal
+processes can lead the robot to choose between the available \textit{live}
+goals; since the appraisals are the immediate outcome of the robot's assessment
+of the collaboration environment. 
 
+\vspace*{-4mm}
 \begin{figure}[tbh]
   \centering
-  \includegraphics[width=0.42\textwidth]{figure/ActionSelection-croped.pdf}
+  \includegraphics[width=0.45\textwidth]{figure/collaborationStructure-croped.pdf}
+  \vspace*{-2mm}
+  \caption{{\fontsize{9}{9}\selectfont Astronaut-robot collaboraiton structure
+  (shared plan).}}
+  \label{fig:taskModel}
+\end{figure}
+\vspace*{-3mm}
+
+For instance, Figure \ref{fig:taskModel} shows a nonprimitive ``Prepare Panels''
+goal which contains three primitive goals. These primitive goals do not have any
+temporal constraint between them. Therefore, if the ``Prepare Panels'' is
+\textit{live}, its primitive goals can be pursued by the responsible agent. In
+this example, the robot is responsible for all of these three primiitive goals.
+According to the collaboration mechanism in our overall framework, the ``Check
+Connector'' primitive is in focus (top of the discourse segment stack),
+therefore it is the most expected goal to be pursued by the robot. However,
+there are two other primitive \textit{live} goals that the robot can pursue
+them. If everything goes based on the plan, the robot will pursue the ``Check
+Connector'' goal as the most expected one, but what if the astronaut asks the
+robot to skip cheking the connector, since she wants to do it? Now, the robot
+requires to choose between the other two goals. And, what if the astronaut fails
+to check the connector and becomes furstrated while the robot has already
+achieved the other two goals? How does the robot need to respond to the
+astronaut's negative emotion?
+
+\vspace*{-3mm}
+\begin{figure}[tbh]
+  \centering
+  \includegraphics[width=0.40\textwidth]{figure/ActionSelection-croped.pdf}
+  \vspace*{-2mm}
   \caption{{\fontsize{9}{9}\selectfont Using coping strategies (action
   selection schemas) to select appropriate goal.}}
   \label{fig:actionSelection}
 \end{figure}
+\vspace*{-4mm}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
