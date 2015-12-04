@@ -325,7 +325,9 @@
 % Do not put math or special symbols in the title.
 
 % \title{Affect-Driven Action Selection in\\Human-Robot Collaboration}
-\title{Human-Robot Collaboration:\\How Emotions Help to Do the Right Thing?}
+% \title{Human-Robot Collaboration:\\How Emotions Help to Do the Right Thing?}
+\title{{\fontsize{8}{9}\selectfontThe Impact of Affective Appraisal on
+Collaborative Goal Management:}\\How My Robot Shares My Worries }
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -443,7 +445,7 @@ appraised event in a collaborative environment.
   \caption{{\fontsize{9}{9}\selectfont Using coping strategies (action
   selection schemas) to select appropriate goal.}}
   \label{fig:actionSelection}
-  \vspace*{-7mm}
+  \vspace*{-3mm}
 \end{figure}
 
 The outcome of each appraisal process is a specific value for the corresponding
@@ -481,7 +483,6 @@ of the collaboration environment.
   (shared plan).}}
   \label{fig:taskModel}
 \end{figure}
-\vspace*{-3mm}
 
 For instance, Figure \ref{fig:taskModel} shows a nonprimitive ``Prepare Panels''
 goal which contains three primitive goals. These primitive goals do not have any
@@ -508,17 +509,17 @@ choose between the available goals.
 	\label{alg:action-selection}
 	\begin{algorithmic}[1]
 		\Function{whatIsNext}{Event $\varepsilon_t$}
-			\Statex
-			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
-			\Statex
-			\State $\mathcal{U} \gets \Call{getEventUtility}{\mathit{g}_{t}}$ 
-			\State $\tau_{t} \gets \Call{getEmotionalThreshold}{\mathit{g}_{t}}$
-			\Statex
-			\If {$( \mathcal{U} \geq \tau_{t} )$}
-				\State \Return {{\fontsize{7}{8}\selectfont RELEVANT}}
-			\Else
-				\State \Return {{\fontsize{7}{8}\selectfont IRRELEVANT}}
-			\EndIf
+% 			\Statex
+% 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+% 			\Statex
+% 			\State $\mathcal{U} \gets \Call{getEventUtility}{\mathit{g}_{t}}$ 
+% 			\State $\tau_{t} \gets \Call{getEmotionalThreshold}{\mathit{g}_{t}}$
+% 			\Statex
+% 			\If {$( \mathcal{U} \geq \tau_{t} )$}
+% 				\State \Return {{\fontsize{7}{8}\selectfont RELEVANT}}
+% 			\Else
+% 				\State \Return {{\fontsize{7}{8}\selectfont IRRELEVANT}}
+% 			\EndIf
 		\EndFunction
 	\end{algorithmic}
 \end{algorithm}

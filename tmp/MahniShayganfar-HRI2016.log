@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  1 DEC 2015 18:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  4 DEC 2015 13:09
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -741,31 +741,62 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+! Undefined control sequence.
+\@title ->{\fontsize {8}{9}\selectfontThe 
+                                          Impact of Affective Appraisal on C...
+l.375 \maketitle
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 373.
+(Font)              <7> on input line 375.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 373.
+(Font)              <5> on input line 375.
+! Undefined control sequence.
+\@title ->{\fontsize {8}{9}\selectfontThe 
+                                          Impact of Affective Appraisal on C...
+l.375 \maketitle
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@title ->{\fontsize {8}{9}\selectfontThe 
+                                          Impact of Affective Appraisal on C...
+l.375 \maketitle
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 <figure/ActionSelection-croped.pdf, id=4, 207.77625pt x 155.58125pt>
 File: figure/ActionSelection-croped.pdf Graphic file (type pdf)
 
 <use figure/ActionSelection-croped.pdf>
 Package pdftex.def Info: figure/ActionSelection-croped.pdf used on input line 4
-41.
+43.
 (pdftex.def)             Requested size: 206.39685pt x 154.5553pt.
-
-<figure/collaborationStructure-croped.pdf, id=5, 346.29375pt x 178.6675pt>
-File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
-
-<use figure/collaborationStructure-croped.pdf>
-Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 478.
-(pdftex.def)             Requested size: 232.19843pt x 119.80473pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./figure/ActionSelection-croped.pdf>]
-(./MahniShayganfar-HRI2016.bbl)
+<figure/collaborationStructure-croped.pdf, id=27, 346.29375pt x 178.6675pt>
+File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
+
+<use figure/collaborationStructure-croped.pdf>
+Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
+ line 480.
+(pdftex.def)             Requested size: 232.19843pt x 119.80473pt.
+ (./MahniShayganfar-HRI2016.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -780,26 +811,24 @@ Before submitting the final camera ready copy, remember to:
 [2 <./figure/collaborationStructure-croped.pdf>] (./MahniShayganfar-HRI2016.aux
 ) ) 
 Here is how much of TeX's memory you used:
- 17685 strings out of 493304
- 356180 string characters out of 6139871
- 742608 words of memory out of 5000000
- 20822 multiletter control sequences out of 15000+600000
- 40035 words of font info for 71 fonts, out of 8000000 for 9000
+ 17664 strings out of 493304
+ 355893 string characters out of 6139871
+ 740608 words of memory out of 5000000
+ 20804 multiletter control sequences out of 15000+600000
+ 37913 words of font info for 67 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  56i,8n,59p,10428b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MahniShayganfar-HRI2016.pdf (2 pages, 162428 bytes).
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MahniShayganfar-HRI2016.pdf (2 pages, 145459 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
