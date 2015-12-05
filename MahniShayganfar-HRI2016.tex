@@ -326,19 +326,22 @@
 
 % \title{Affect-Driven Action Selection in\\Human-Robot Collaboration}
 % \title{Human-Robot Collaboration:\\How Emotions Help to Do the Right Thing?}
-\title{{\fontsize{8}{9}\selectfontThe Impact of Affective Appraisal on
-Collaborative Goal Management:}\\How My Robot Shares My Worries }
+\title{{\fontsize{19}{20}\selectfont Impact of Affective Appraisal on
+Collaborative Goal Management:\\How My Robot Shares My Worries}}
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Mahni Shayganfar and Charles Rich and Candace
-L. Sidner} 
-\IEEEauthorblockA{Fuller Laboratories\\
-Computer Science Department\\
-Worcester Polytechnic Institute\\
-Worcester, Massachusetts 01609-2280\\
-mshayganfar $|$ rich $|$ sidner@wpi.edu}}
+
+% \author{\IEEEauthorblockN{Mahni Shayganfar and Charles Rich and Candace
+% L. Sidner} 
+% \IEEEauthorblockA{Fuller Laboratories\\
+% Computer Science Department\\
+% Worcester Polytechnic Institute\\
+% Worcester, Massachusetts 01609-2280\\
+% mshayganfar $|$ rich $|$ sidner@wpi.edu}}
+
+\author{Anonymous}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -399,10 +402,38 @@ The abstract goes here.
 
 Cognitive architectures involve various components and processes to provide
 cognitive functions to intelligent agents. All these cognitive functions
-ultimately serve the agents what to do next. Therefore, the underlying processes
-of an intelligent agent is in the service of action selection procedure. Hence,
-any intelligent agent must continually answer the question ``What do I do
-next?'', since action is the real measure of intelligence.
+ultimately serve the agents what goal to pursue next. However, there
+should be a process to provide dynamic adjustments in goal priority in response
+to internal and external changes.
+
+Goals represent an important part of the context information during
+collaboration. However, not all goals are appropriate to pursue in different
+conditions. In fact, it can be distructive to pursue a good goal is in a wrong
+context.
+
+Changes in a dynamic collaboration environment alter the balance of alternative
+goals. These changes can occur as the reflection of collaborators' internal
+changes, the influence of their actions, or the occurance of any change in the
+collaborative environment.
+
+Emotions have different functions. These functions, e.g., \textit{goal
+management}, help one to communicate and/or regulate their internal changes as
+well as changes in their environment. In a collaborative environment, emotions
+represent the outcome of underlying internal mental processes of the
+collaborators. Goal-oriented emotions such as anger, frustration and
+worriedness, constitute the same representation of the mental processes status
+specifically influenced by one's internal goals. Therefore, the reverse
+appraisal of the collaborator's perceived emotion can impact regulation of the
+robot's active goals during collaboration. Furthermore, the appraisal of the
+individual alternative goals provides a better context-dependant assessment of
+these goals. Hence, we use both appraisal and reverse appraisal in our goal
+management process.
+
+Goal management provides diverse influence on an intelligent agent's behavior,
+such as choosing the right goal between available alternatives with respect to
+the collaboration status, or changing the focus of attention to a different goal
+at the right time. The evaluative aspect of the affective appraisal processes
+has a key role in differentiating between available goals.
 
 All of the solutions for the action selection problem address the question of
 which action to perform at what time \cite{tyrrell:action-selection}.
@@ -442,8 +473,8 @@ appraised event in a collaborative environment.
   \centering
   \includegraphics[width=0.40\textwidth]{figure/ActionSelection-croped.pdf}
   \vspace*{-2mm}
-  \caption{{\fontsize{9}{9}\selectfont Using coping strategies (action
-  selection schemas) to select appropriate goal.}}
+  \caption{{\fontsize{9}{9}\selectfont Reciprocal influence of Collaboration
+  and Appraisal mechanisms in our framework.}}
   \label{fig:actionSelection}
   \vspace*{-3mm}
 \end{figure}
@@ -501,28 +532,32 @@ to check the connector and becomes furstrated while the robot has already
 achieved the other two goals? How does the robot need to respond to the
 astronaut's negative emotion? or any emotion?
 
-Algorithm \ref{alg:action-selection} shows how our collaborative robot can
-choose between the available goals.
+Equation \ref{eqn:cost} shows how our collaborative robot can choose between
+the available goals.
 
-\begin{algorithm}
-	\caption{(Action Selection)}
-	\label{alg:action-selection}
-	\begin{algorithmic}[1]
-		\Function{whatIsNext}{Event $\varepsilon_t$}
-% 			\Statex
-% 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
-% 			\Statex
-% 			\State $\mathcal{U} \gets \Call{getEventUtility}{\mathit{g}_{t}}$ 
-% 			\State $\tau_{t} \gets \Call{getEmotionalThreshold}{\mathit{g}_{t}}$
-% 			\Statex
-% 			\If {$( \mathcal{U} \geq \tau_{t} )$}
-% 				\State \Return {{\fontsize{7}{8}\selectfont RELEVANT}}
-% 			\Else
-% 				\State \Return {{\fontsize{7}{8}\selectfont IRRELEVANT}}
-% 			\EndIf
-		\EndFunction
-	\end{algorithmic}
-\end{algorithm}
+\vspace*{-3mm}
+\begin{equation}
+Cost(g) =  \frac{P(g)\times D(g)}{S(g)+1}
+\label{eqn:cost}
+\end{equation}
+
+\vspace*{-3mm}
+\begin{equation}
+P(g) =  distance(g_{_{act}},g_{_{pot}})
+\label{eqn:proximity}
+\end{equation}
+
+\vspace*{-5mm}
+\begin{equation}
+D(g) = \left[H(g)+1\right]\times\left[\sum\limits_{m=0}^{M} pred_e(g) +
+\sum\limits_{n=0}^{N} desc_e(g)\right]
+\label{eqn:difficulty}
+\end{equation}
+
+\begin{equation}
+S(g) = \frac{depth(g)}{degree(g)+1}
+\label{eqn:specificity}
+\end{equation}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -623,11 +658,11 @@ choose between the available goals.
 % conference papers do not normally have an appendix
 
 % use section* for acknowledgment
-\section*{Acknowledgment}
-{\fontsize{8.2}{9}\selectfont This work is supported by the National Science
-Foundation under award IIS-1012083. Any opinions, findings, and conclusions
-expressed in this material are those of the authors and do not necessarily
-reflect the views of the National Science Foundation.}
+% \section*{Acknowledgment}
+% {\fontsize{8.2}{9}\selectfont This work is supported by the National Science
+% Foundation under award IIS-1012083. Any opinions, findings, and conclusions
+% expressed in this material are those of the authors and do not necessarily
+% reflect the views of the National Science Foundation.}
 
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
