@@ -532,18 +532,40 @@ to check the connector and becomes furstrated while the robot has already
 achieved the other two goals? How does the robot need to respond to the
 astronaut's negative emotion? or any emotion?
 
-Equation \ref{eqn:cost} shows how our collaborative robot can choose between
-the available goals.
+Equation \ref{eqn:cost} shows our general cost function we use to calculate the
+cost of each individual potential goal. The base in the equation is considered
+to calculate the cost of pursuing any given goal. There are three different
+functions used to calculate the cost, including \textit{proximity} of a goal
+$P(g)$, \textit{difficulty} of a goal $D(g)$, and \textit{specificity} of a
+goal $S(g)$. The details about these functions are provided in equations
+\ref{eqn:proximity} to \ref{eqn:specificity}. The exponent part of our cost
+function is considered to capture a) influence of human's emotional instance on
+the cost, and b) the influece of self appraisal of any given goal. The
+$R_h\in[0,1]$ and $D_h\in[-1,1]$  are the \textit{relevance} and
+\textit{desirability} values respectively, which will be attained based on the
+reverse appraisal of the human's perceived emotion. For instance, if the
+astronaut is frustrated the $D_h$ obtains a negative value (depending on how
+undesirable is the event according to reverse appraisal), and $R_h$ will be 1
+for the active goal and its value descends to 0 for other live goals depending
+on their distance to the active goal in the shared plan. The $R_r\in[0,1]$ and
+$D_r\in[-1,1]$ are also the \textit{relevance} and \textit{desirability} values.
+However, the self appraisal functions provide these values for all of the live
+goals. For instance, for the active goal that the astronuat was frustrated for,
+the $D_r$ can be a positive value (depending on the self's desirability
+appraisal function), and $R_r$ can be 1, since the active goal is
+\textit{relevant} for the robot. These values will change for the other live
+goals.
 
 \vspace*{-3mm}
 \begin{equation}
-Cost(g) =  \frac{P(g)\times D(g)}{S(g)+1}
+Cost(g) = \left(\frac{P(g)\times D(g)}{S(g)+1}\right)^{-C[(R_r+1)D_r +
+(R_h+1)D_h]}
 \label{eqn:cost}
 \end{equation}
 
-\vspace*{-3mm}
+\vspace*{-1mm}
 \begin{equation}
-P(g) =  distance(g_{_{act}},g_{_{pot}})
+P(g) =  distance(g_{_{act}},g)
 \label{eqn:proximity}
 \end{equation}
 
