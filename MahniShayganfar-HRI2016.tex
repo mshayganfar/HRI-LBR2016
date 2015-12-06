@@ -484,10 +484,10 @@ fact, it is a) the functions of emotions in a social setting, i.e., \textit{goal
 management}, and b) the meaning of the collabrator's perceived emotion in
 collaboration context.
 
-A collaboration structure provides a hierarchy and the constraints of the shared
+A collaboration structure provides a hierarchy and constraints of the shared
 goals in the form of a shared plan (Figure \ref{fig:taskModel}) which contains
-both the robot and human collaborator's goals. The robot pursue's the goal in
-which the robot is responsible for in the shared plan. However, there can be
+both the robot and the human collaborator's goals. The robot pursues the goals
+for which the robot is responsible in the shared plan. However, there can be
 several goals available for the robot to pursue at each point in time during
 collaboration. In other words, any ``live'' goal can be pursued by the robot. A
 goal is live if all of its \textit{predecessors} are achieved and all of its
@@ -504,31 +504,19 @@ collaboration environment.
   \caption{{\fontsize{9}{9}\selectfont Astronaut-robot collaboraiton structure
   (shared plan).}}
   \label{fig:taskModel}
-  \vspace*{-9mm}
+  \vspace*{-6mm}
 \end{figure}
 
 For instance, Figure \ref{fig:taskModel} shows a nonprimitive ``Prepare Panels''
 goal which contains three primitive goals. These primitive goals do not have any
-temporal constraint between them. Therefore, if the ``Prepare Panels'' is live,
-its primitive goals can be pursued by the responsible agent. In this example,
-the astronaut is responsible for the first primitive goal ``Check Connector'',
-and the robot is responsible for the next two primitive goals. According to the
-collaboration mechanism in our overall framework, the ``Check Connector''
-primitive is in focus, and the astronaut is pursuing this goal. Suddenly, the
-astronaut tells the robot that the connector is broken and she is
-\textit{worried} about the failure of the overall goal. The robot perceives and
-interprets astronaut's negative emotion using reverse appraisal (the details
-about reverse appraisal process in our framework is beyond the scope of this
-paper). Then, the robot evaluates the cost function for the current and the live
-goals. The astronaut's negative emotion increases the cost of pursuing the
-current goal, and also affects two other primitive live goals under the same
-parent. Therefore, the robot instead of insisting on pursuing the same blocked
-goal which has caused the astronaut's negative emotion, acknowledges the
-astronaut's emotion to be able to choose one of the live goals later at the
-right time. Robot's behavior mitigates the astronaut negative emotion helping
-the robot to pursue another live goal ``Coonect Adaptor" which has a lower cost
-with respect to the collaboration status. The details about the robot's behavior
-is beyond the scope of this paper.
+temporal constraint between them. Therefore, if ``Prepare Panels'' is live, its
+primitive goals can be pursued by the responsible agent. In this example, the
+astronaut is responsible for the primitive goal ``Check Connector''; the robot
+is responsible for the remaining two primitive goals. According to the
+collaboration mechanism in our overall framework, ``Check Connector'' is in
+focus, with the astronaut pursuing this goal. Suddenly, the astronaut tells the
+robot that the connector is broken and she is \textit{worried} about failure of
+the overall goal.
 
 Equation \ref{eqn:cost} shows our general cost function we use to calculate the
 cost of each individual potential goal. The base in the equation is considered
@@ -537,29 +525,28 @@ functions used to calculate the cost, including \textit{proximity} of a goal
 $P(g)$, \textit{difficulty} of a goal $D(g)$, and \textit{specificity} of a
 goal $S(g)$. The details about these functions are provided in equations
 \ref{eqn:proximity} to \ref{eqn:specificity}. The exponent part of our cost
-function is considered to capture a) influence of human's emotional instance on
-the cost, and b) the influece of self appraisal of any given goal. The
-$R_h\in[0,1]$ and $D_h\in[-1,1]$  are the \textit{relevance} and
+function is considered to capture a) the influence of human's emotional instance
+on the cost, and b) the influece of self appraisal of any given goal. The
+$R_h\in[0,1]$ and $D_h\in[-1,1]$  are \textit{relevance} and
 \textit{desirability} values respectively, which will be attained based on the
 reverse appraisal of the human's perceived emotion. For instance, if the
-astronaut is frustrated the $D_h$ obtains a negative value (depending on how
+astronaut is frustrated $D_h$ obtains a negative value (depending on how
 undesirable is the event according to reverse appraisal), and $R_h$ will be 1
 for the active goal and its value descends to 0 for other live goals depending
-on their distance to the active goal in the shared plan. The $R_r\in[0,1]$ and
-$D_r\in[-1,1]$ are also the \textit{relevance} and \textit{desirability} values.
+on their distance to the active goal in the shared plan. $R_r\in[0,1]$ and
+$D_r\in[-1,1]$ are also \textit{relevance} and \textit{desirability} values.
 However, the self appraisal functions provide these values for all of the live
-goals. For instance, for the active goal that the astronuat was frustrated for,
-the $D_r$ can be a positive value (depending on the self's desirability
-appraisal function), and $R_r$ can be 1, since the active goal is
-\textit{relevant} for the robot. These values will change for the other live
-goals depending on how \textit{relevant} they are with respect to the
-collaboration status. Finally, $C\in[1,\infty]$ is a constant used to control the
-influence of affect on cost value and it has negative sign since the
-\textit{undesirablity} (negative values) should increase the cost, and
-$\alpha\in[1,\infty]$ is also another constant to control the importance of
-reverse appraisal for the cost function.
+goals. For instance, for the active goal for which the astronuat was frustrated,
+$D_r$ can be a positive value (depending on the self's desirability appraisal
+function); $R_r$ can be 1, since the active goal is \textit{relevant} for the
+robot. These values will change for the other live goals depending on how
+\textit{relevant} they are with respect to the collaboration status. Finally,
+$C\in[1,\infty]$ is a constant used to control the influence of affect on cost
+value. It has negative sign since \textit{undesirablity} (negative values)
+should increase the cost. $\alpha\in[1,\infty]$ is another constant used to
+control the importance of reverse appraisal relative to self appraisal.
 
-\vspace*{-3mm}
+\vspace*{-4mm}
 \begin{equation}
 Cost(g) = \left(\frac{P(g)\times D(g)}{S(g)+1}\right)^{-C[(R_r+1)D_r + \alpha
 (R_h+1)D_h]}
@@ -581,38 +568,52 @@ The \textit{difficulty} of a goal is a function of three parameters (Equation
 \ref{eqn:difficulty}) which consider the difficulty based on a) topology of the
 shared plan tree (domain independent), and b) the amount of effort required to
 pursue a given goal (domain dependent). The $\sum pred_e(g)$ is the sum of
-efforts that all the \textit{predecessors} of a given goal $g$ require to be
-achieved. The $\sum desc_e(g)$ is the sum of efforts that all the
-\textit{descendants} of a given goal $g$ require to be achieved. The effort
-values represent the amount of effort for the goals with respect to the domain.
-The $H(g)$ is the height of the given goal $g$ and it is important since a goal
-with higher height value (longest path from the goal to a leaf; a primitive
-goal) makes the collaboration more difficult than the goal with shorter height.
+efforts that all the \textit{predecessors} of a given goal $g$ require. The
+$\sum desc_e(g)$ is the sum of efforts that all the \textit{descendants} of a
+given goal $g$ require. The effort values represent the amount of effort for the
+goals with respect to the domain. The $H(g)$ is the height of the given goal $g$
+and it is important since a goal with higher height value (longest path from the
+goal to a leaf; a primitive goal) makes the collaboration more difficult than a
+goal with shorter height.
 
-\vspace*{-5mm}
+\vspace*{-7mm}
 \begin{equation}
 D(g) = \Big(H(g)+1\Big)\times\left[\sum\limits_{m=0}^{M} pred_e(g) +
 \sum\limits_{n=0}^{N} desc_e(g)\right]
 \label{eqn:difficulty}
 \end{equation}
 
-The \textit{specificity} of a goal is the function of \textit{depth} (distcance
+The \textit{specificity} of a goal is the function of \textit{depth} (distance
 from the root) and \textit{degree} (number of children) of a given goal $g$. The
 first number primitive goal (root) is the least specific goal, and the
 primitives (leaves) are the most specific goals.
 
-\vspace*{-2mm}
+\vspace*{-3mm}
 \begin{equation}
 S(g) = \frac{depth(g)}{degree(g)+1}
 \label{eqn:specificity}
 \end{equation}
 
+\vspace*{-1mm}
 The tuples below the goals in Figure \ref{fig:taskModel} indicate the cost value
 of each goal. The first number in each tuple is the cost value without the
-influence of the affetive part of the cost function, i.e., the exponent is equal
-to 1 in Equation \ref{eqn:cost}. The second number of each tuple indicates the
-value of the cost including the influence of affetive appraisal and the
+influence of the affective part of the cost function, i.e., the exponent is
+equal to 1 in Equation \ref{eqn:cost}. The second number of each tuple indicates
+the value of the cost including the influence of affective appraisal and the
 astronaut's perceived emotion.
+
+The robot perceives and interprets the astronaut's negative emotion using
+reverse appraisal (the details about reverse appraisal process in our framework
+is beyond the scope of this paper). Then, the robot evaluates the cost function
+for the current and the live goals. The astronaut's negative emotion increases
+the cost of pursuing the current goal, and also affects two other primitive live
+goals under the same parent. Therefore, instead of insisting on pursuing the
+same blocked goal which has caused the astronaut's negative emotion, the robot
+acknowledges the astronaut's emotion. The robot's behavior mitigates the
+astronaut negative emotion allowing the robot to pursue another live goal
+``Coonect Adaptor" which has a lower cost with respect to the collaboration
+status. The details about the robot's behavior is beyond the scope of this
+paper.
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -708,12 +709,15 @@ astronaut's perceived emotion.
 % footnotes above bottom floats. This can be corrected via the
 % \fnbelowfloat command of the stfloats package.
 
+\vspace*{-2mm}
 \section{Conclusion}
 
 We use our proposed cost function in our goal management algorithm to be able to
 integrate affective appraisal into the collaboration mechanism in our framework.
-We will continue to implement other parts of our framework, including action
-selection and motivation processes.
+We will evaluate our cost function through conducting a user study to compare
+our results with humans' responses. We will continue to implement other parts of
+our framework, including action selection and motivation processes.
+\vspace*{-2mm}
 
 % conference papers do not normally have an appendix
 
