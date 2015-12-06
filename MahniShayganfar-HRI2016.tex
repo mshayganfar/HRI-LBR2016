@@ -381,12 +381,13 @@ Collaborative Goal Management:\\How My Robot Shares My Worries}}
 % in the abstract
 \begin{abstract}
 A collaborative robot needs to be able to regulate and manage shared goals
-during collaboration. Emotions has crucial influence on goal management process.
-In this paper, we provide a cost function that we use to choose a goal in the
-shared plan with the lowest cost value in a set of alternative goals. This cost
-function provides the cost value a) based on the goal attributes we consider in
-our framework, b) with respect to the reverse appraisal of the percived emotion,
-and c) the appraisal of the collaborative environment.
+during collaboration. Emotion has a crucial influence on the goal management
+process. In this paper, we provide a cost function that we use to choose the
+goal in the shared plan with the lowest cost value out of a set of alternative
+goals. This cost function provides the cost value a) based on the goal
+attributes we consider in our framework, b) with respect to the reverse
+appraisal of the percived emotion, and c) the appraisal of the collaborative
+environment.
 \end{abstract}
 
 % no keywords
@@ -413,32 +414,30 @@ and c) the appraisal of the collaborative environment.
 % should be a process to provide dynamic adjustments in goal priority in response
 % to internal and external changes.
 
-Goals represent an important part of the context information during
-collaboration. However, not all goals are appropriate to pursue in different
-conditions. In fact, it can be distructive and noncollaborative to pursue a good
-goal in a wrong context. Therefore, a collaborative robot needs to be able to
-regulate and manage shared goals during collaboration. Goal management process
-provides a diverse influence on a collaborative robot's behavior, such as
-choosing the right goal between available alternatives with respect to the
-collaboration status, or changing the focus of attention to a different goal at
-the right time.
+Goals represent an important part of the context during collaboration. However,
+not all goals are appropriate to pursue, depending on conditions. In fact, it
+can be destructive for a collaboration to pursue a good goal in a wrong context.
+Therefore, a collaborative robot must be able to manage shared goals during
+collaboration. The goal management process provides a critical influence on a
+collaborative robot's behavior by maintaining or shifting the focus of attention
+to an appropriate goal based on the collaboration status.
 
-Changes in a dynamic collaboration environment alter the balance of alternative
-goals. These changes can occur as the reflection of collaborators' internal
-changes, the influence of their actions, or in general, the occurance of any
-change in the collaborative environment. Most of the times, emotions are the
-repercussions of the changes in the environment. Emotions have different
-functions \cite{scheutz:architectural-action-selection}. These functions, e.g.,
-\textit{goal management}, help one to communicate and/or regulate their internal
-changes as well as changes in their environment. In a collaborative environment,
-emotions represent the outcome of underlying internal mental processes of the
-collaborators. Goal-oriented emotions such as anger, frustration and
-worriedness, constitute the same representation of the mental processes
-specifically influenced by one's internal goals. Therefore, the reverse
+% Most of the times, emotions are the repercussions of the changes in the
+% environment.
+
+Changes in a collaboration environment alter the balance of alternative goals.
+These changes can reflect the collaborators' internal changes, and the influence
+of their actions. In a collaboration environment, emotions represent the outcome
+of underlying internal mental processes of the collaborators. Emotions have
+different functions \cite{scheutz:architectural-action-selection}. These
+functions, e.g., \textit{goal management}, help one to communicate and/or
+regulate internal changes as well as changes in the environment. Goal-oriented
+emotions such as anger, frustration and worriedness, constitute the mental
+processes specifically influenced by one's internal goals. Therefore, reverse
 appraisal \cite{gratch:reverse-appraisal} of the collaborator's perceived
 emotion can impact regulation of the robot's active goals during collaboration.
-Furthermore, the appraisal of the individual alternative goals provides a better
-context-dependant assessment of these goals. Hence, we use both appraisal and
+Furthermore, the appraisal of the individual alternative goals provides a
+context-dependent assessment of these goals. Hence, we use both appraisal and
 reverse appraisal in our goal management process.
 
 % The evaluative aspect of the affective appraisal processes has a
@@ -447,13 +446,23 @@ reverse appraisal in our goal management process.
 \vspace*{-2mm}
 \section{Contribution}
 
-In this paper, we focus on small part of a larger architecture framework
-built based on our \textit{Affective Motivational Collaboration Theory}
+Here, we focus on a small part of a larger architecture framework built based on
+our \textit{Affective Motivational Collaboration Theory}
 \cite{shayganfar:amct-symbiotic}. We introduce our goal management process based
 on a cost function including the influence of affective appraisal and reverse
 appraisal processes. Goal management is a crucial part of our investigation of
-the reciprocal influence of appraisal on collaboration structure (see Figure
+the reciprocal influence of appraisal on a collaboration structure (see Figure
 \ref{fig:actionSelection}).
+
+\begin{figure}[tbh]
+  \centering
+  \includegraphics[width=0.36\textwidth]{figure/ActionSelection-croped.pdf}
+  \vspace*{-2mm}
+  \caption{{\fontsize{9}{9}\selectfont Reciprocal influence of Collaboration
+  and Appraisal mechanisms in our framework.}}
+  \label{fig:actionSelection}
+  \vspace*{-7mm}
+\end{figure}
 
 We have investigated the influence of a collaboration structure on
 appraisal processes, and implemented distinct algorithms for different
@@ -464,28 +473,16 @@ appraisal variables included: a) \textit{relevance} used to measure the
 significance of an event for the robot, b) \textit{desirability} to characterize
 the value of an event to the robot in terms of whether the event facilitates or
 thwarts the collaboration goal, c) \textit{expectedness} and d)
-\textit{controllability}. The last two appraisal variables are beyond the scope
-of this paper.
-
-\vspace*{-3mm}
-\begin{figure}[tbh]
-  \centering
-  \includegraphics[width=0.38\textwidth]{figure/ActionSelection-croped.pdf}
-  \vspace*{-2mm}
-  \caption{{\fontsize{9}{9}\selectfont Reciprocal influence of Collaboration
-  and Appraisal mechanisms in our framework.}}
-  \label{fig:actionSelection}
-  \vspace*{-2mm}
-\end{figure}
-
-The outcome of each appraisal process is a specific value for the corresponding
-appraisal variable. The vector containing these appraisal variables can be
-mapped to a particular emotion instance at each point in time. For instance, a
-\textit{relevant, undesirable, expected}, and \textit{uncontrollable} event can
-elicit \textit{anger} in an individual. However, it is not the actual emotion
-instance that is important for us. In fact, it is a) the functions of emotions
-in a social setting, i.e., \textit{goal management}, and b) the meaning of
-the collabrator's perceived emotion in collaboration context.
+\textit{controllability} (the last two appraisal variables are beyond the scope
+of this paper). The outcome of each appraisal process is a specific value for
+the corresponding appraisal variable. The vector containing these appraisal
+variables can be mapped to a particular emotion instance at each point in time.
+For instance, a \textit{relevant, undesirable, expected}, and
+\textit{uncontrollable} event can elicit \textit{anger} in an individual.
+However, it is not the actual emotion instance that is important for us. In
+fact, it is a) the functions of emotions in a social setting, i.e., \textit{goal
+management}, and b) the meaning of the collabrator's perceived emotion in
+collaboration context.
 
 A collaboration structure provides a hierarchy and the constraints of the shared
 goals in the form of a shared plan (Figure \ref{fig:taskModel}) which contains
