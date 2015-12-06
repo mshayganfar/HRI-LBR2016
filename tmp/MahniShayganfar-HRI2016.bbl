@@ -21,19 +21,17 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{tyrrell:action-selection}
-T.~Tyrrell, ``Computational mechanisms for action selection,'' Ph.D.
-  dissertation, University of Edinburgh, 1993.
-
 \bibitem{scheutz:architectural-action-selection}
 M.~Scheutz and V.~Andronache, ``Architectural mechanisms for dynamic changes of
   behavior selection strategies in behavior-based systems,'' \emph{{IEEE}
   Transactions on Systems, Man, and Cybernetics, Part {B}}, vol.~34, no.~6, pp.
   2377--2395, 2004.
 
-\bibitem{franklin:artificial-minds}
-S.~Franklin, \emph{Artificial Minds}, ser. A Bradford book.\hskip 1em plus
-  0.5em minus 0.4em\relax MIT Press, 1997.
+\bibitem{gratch:reverse-appraisal}
+C.~M. de~Melo, J.~Gratch, P.~Carnevale, and S.~J. Read, ``Reverse appraisal:
+  The importance of appraisals for the effect of emotion displays on people's
+  decision-making in social dilemma,'' in \emph{Proceedings of the 34th Annual
+  Meeting of the Cognitive Science Society ({CogSci})}, 2012.
 
 \bibitem{shayganfar:amct-symbiotic}
 M.~Shayganfar, C.~Rich, and C.~L. Sidner, ``Human-robot collaboration:
@@ -41,12 +39,8 @@ M.~Shayganfar, C.~Rich, and C.~L. Sidner, ``Human-robot collaboration:
   Cognitive Systems Workshop at the 13th AAAI Conference on Artificial
   Intelligence}, 2016.
 
-\bibitem{shayganfar:emotional-awareness}
-M.~Shayganfar, C.~Rich, and C.~Sidner, ``Toward improving human-robot
-  collaboration with emotional awareness,'' \emph{Under Review}, 2015.
-
 \bibitem{shayganfar:appraisal}
-M.~Shayganfar, C.~Rich, and C.~L. Sidner, ``Appraisal in human-robot
-  collaboration,'' in \emph{Under Review}, 2016.
+------, ``Appraisal in human-robot collaboration,'' in \emph{Under Review},
+  2016.
 
 \end{thebibliography}

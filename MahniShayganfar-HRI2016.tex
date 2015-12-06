@@ -380,7 +380,13 @@ Collaborative Goal Management:\\How My Robot Shares My Worries}}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-The abstract goes here.
+A collaborative robot needs to be able to regulate and manage shared goals
+during collaboration. Emotions has crucial influence on goal management process.
+In this paper, we provide a cost function that we use to choose a goal in the
+shared plan with the lowest cost value in a set of alternative goals. This cost
+function provides the cost value a) based on the goal attributes we consider in
+our framework, b) with respect to the reverse appraisal of the percived emotion,
+and c) the appraisal of the collaborative environment.
 \end{abstract}
 
 % no keywords
@@ -398,85 +404,78 @@ The abstract goes here.
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
+\vspace*{-2mm}
 \section{Introduction}
 
-Cognitive architectures involve various components and processes to provide
-cognitive functions to intelligent agents. All these cognitive functions
-ultimately serve the agents what goal to pursue next. However, there
-should be a process to provide dynamic adjustments in goal priority in response
-to internal and external changes.
+% Cognitive architectures involve various components and processes to provide
+% cognitive functions to intelligent agents. All these cognitive functions
+% ultimately serve the agents what goal to pursue next. However, there
+% should be a process to provide dynamic adjustments in goal priority in response
+% to internal and external changes.
 
 Goals represent an important part of the context information during
 collaboration. However, not all goals are appropriate to pursue in different
-conditions. In fact, it can be distructive to pursue a good goal is in a wrong
-context.
+conditions. In fact, it can be distructive and noncollaborative to pursue a good
+goal in a wrong context. Therefore, a collaborative robot needs to be able to
+regulate and manage shared goals during collaboration. Goal management process
+provides a diverse influence on a collaborative robot's behavior, such as
+choosing the right goal between available alternatives with respect to the
+collaboration status, or changing the focus of attention to a different goal at
+the right time.
 
 Changes in a dynamic collaboration environment alter the balance of alternative
 goals. These changes can occur as the reflection of collaborators' internal
-changes, the influence of their actions, or the occurance of any change in the
-collaborative environment.
-
-Emotions have different functions. These functions, e.g., \textit{goal
-management}, help one to communicate and/or regulate their internal changes as
-well as changes in their environment. In a collaborative environment, emotions
-represent the outcome of underlying internal mental processes of the
+changes, the influence of their actions, or in general, the occurance of any
+change in the collaborative environment. Most of the times, emotions are the
+repercussions of the changes in the environment. Emotions have different
+functions \cite{scheutz:architectural-action-selection}. These functions, e.g.,
+\textit{goal management}, help one to communicate and/or regulate their internal
+changes as well as changes in their environment. In a collaborative environment,
+emotions represent the outcome of underlying internal mental processes of the
 collaborators. Goal-oriented emotions such as anger, frustration and
-worriedness, constitute the same representation of the mental processes status
+worriedness, constitute the same representation of the mental processes
 specifically influenced by one's internal goals. Therefore, the reverse
-appraisal of the collaborator's perceived emotion can impact regulation of the
-robot's active goals during collaboration. Furthermore, the appraisal of the
-individual alternative goals provides a better context-dependant assessment of
-these goals. Hence, we use both appraisal and reverse appraisal in our goal
-management process.
+appraisal \cite{gratch:reverse-appraisal} of the collaborator's perceived
+emotion can impact regulation of the robot's active goals during collaboration.
+Furthermore, the appraisal of the individual alternative goals provides a better
+context-dependant assessment of these goals. Hence, we use both appraisal and
+reverse appraisal in our goal management process.
 
-Goal management provides diverse influence on an intelligent agent's behavior,
-such as choosing the right goal between available alternatives with respect to
-the collaboration status, or changing the focus of attention to a different goal
-at the right time. The evaluative aspect of the affective appraisal processes
-has a key role in differentiating between available goals.
+% The evaluative aspect of the affective appraisal processes has a
+% key role in differentiating between available goals.
 
-All of the solutions for the action selection problem address the question of
-which action to perform at what time \cite{tyrrell:action-selection}.
-
-\cite{scheutz:architectural-action-selection}
-
-For an intelligent agent to convey appropriate behavior, its actions should be
-chosen based on an accurate evaluation of the environment
-\cite{franklin:artificial-minds}.
-
-\section{Background}
-
+\vspace*{-2mm}
 \section{Contribution}
 
 In this paper, we focus on small part of a larger architecture framework
 built based on our \textit{Affective Motivational Collaboration Theory}
-\cite{shayganfar:amct-symbiotic}, \cite{shayganfar:emotional-awareness}. First,
-we investigated the influence of a collaboration structure on appraisal
-processes \cite{shayganfar:appraisal}, and now we are investigating the
-influence of appraisal on collaboration structure (see Figure
+\cite{shayganfar:amct-symbiotic}. We introduce our goal management process based
+on a cost function including the influence of affective appraisal and reverse
+appraisal processes. Goal management is a crucial part of our investigation of
+the reciprocal influence of appraisal on collaboration structure (see Figure
 \ref{fig:actionSelection}).
 
-In the first part of our work, we implemented distinct algorithms for different
-appraisal processes for a collaborative robot. According to the appraisal
-theory, the outcome of these processes are separable antecedents of emotion with
-which the robot evaluates the environment. Our appraisal variables included: a)
-\textit{relevance} used to measure the significance of an event for the robot,
-b) \textit{desirability} to characterize the value of an event to the robot
-in terms of whether the event facilitates or thwarts the collaboration goal, c)
-\textit{expectedness} indicating the extent to which the truth value of a state
-could have been predicted from causal interpretation of an event, and d)
-\textit{controllability} indicating the extent to which an event can be
-influenced, and it is associated with a robot's ability to cope with an
-appraised event in a collaborative environment.
+We have investigated the influence of a collaboration structure on
+appraisal processes, and implemented distinct algorithms for different
+appraisal processes for a collaborative robot \cite{shayganfar:appraisal}.
+According to the appraisal theory, the outcome of these processes are separable
+antecedents of emotion with which the robot evaluates the environment. Our
+appraisal variables included: a) \textit{relevance} used to measure the
+significance of an event for the robot, b) \textit{desirability} to characterize
+the value of an event to the robot in terms of whether the event facilitates or
+thwarts the collaboration goal, c) \textit{expectedness} and d)
+\textit{controllability}. The last two appraisal variables are beyond the scope
+of this paper.
 
+\vspace*{-3mm}
 \begin{figure}[tbh]
   \centering
-  \includegraphics[width=0.40\textwidth]{figure/ActionSelection-croped.pdf}
+  \includegraphics[width=0.38\textwidth]{figure/ActionSelection-croped.pdf}
   \vspace*{-2mm}
   \caption{{\fontsize{9}{9}\selectfont Reciprocal influence of Collaboration
   and Appraisal mechanisms in our framework.}}
   \label{fig:actionSelection}
-  \vspace*{-3mm}
+  \vspace*{-2mm}
 \end{figure}
 
 The outcome of each appraisal process is a specific value for the corresponding
@@ -485,52 +484,54 @@ mapped to a particular emotion instance at each point in time. For instance, a
 \textit{relevant, undesirable, expected}, and \textit{uncontrollable} event can
 elicit \textit{anger} in an individual. However, it is not the actual emotion
 instance that is important for us. In fact, it is a) the functions of emotions
-in a social setting, e.g., \textit{action selection}, and b) the meaning of
-the collabrator's perceived emotion that we are interested to investigate in
-collaboration context.
+in a social setting, i.e., \textit{goal management}, and b) the meaning of
+the collabrator's perceived emotion in collaboration context.
 
-In our current work, we are investigating how appraisal can influence the
-\textit{action selection} process during collaboration. The action selection
-process should provide the most appropriate action out of repertoire of possible
-actions. A collaboration structure provides a hierarchy and the constraints of
-the shared goals in the form of a shared plan (Figure \ref{fig:taskModel}).
-Therefore, a shared plan contains both the robot and human collaborator's goals.
-The robot takes actions with respect to the goals of which the robot is
-responsible for in the shared plan. However, there can be several goals
-available for the robot to pursue at each point in time during collaboration.
-In other words, any ``live'' goal can be pursued by the robot. A goal is
-\textit{live} if all of its predecessors are \textit{achieved} and all of its
-preconditions are \textit{satisfied}. Therefore, a collaborative robot requires
-a mechanism to choose between a set of \textit{live} goals. We believe appraisal
-processes can lead the robot to choose between the available \textit{live}
-goals; since the appraisals are the immediate outcome of the robot's assessment
-of the collaboration environment. 
+A collaboration structure provides a hierarchy and the constraints of the shared
+goals in the form of a shared plan (Figure \ref{fig:taskModel}) which contains
+both the robot and human collaborator's goals. The robot pursue's the goal in
+which the robot is responsible for in the shared plan. However, there can be
+several goals available for the robot to pursue at each point in time during
+collaboration. In other words, any ``live'' goal can be pursued by the robot. A
+goal is live if all of its \textit{predecessors} are achieved and all of its
+\textit{preconditions} are satisfied. Therefore, a collaborative robot requires
+a mechanism to choose between a set of live goals. We believe appraisal
+processes are crucial to choose between the available live goals; since the
+appraisals are the immediate outcome of the robot's assessment of the
+collaboration environment.
 
 \begin{figure}[tbh]
   \centering
-  \includegraphics[width=0.45\textwidth]{figure/collaborationStructure-croped.pdf}
-  \vspace*{-2mm}
+  \includegraphics[width=0.44\textwidth]{figure/collaborationStructure-croped.pdf}
+  \vspace*{-3mm}
   \caption{{\fontsize{9}{9}\selectfont Astronaut-robot collaboraiton structure
   (shared plan).}}
   \label{fig:taskModel}
+  \vspace*{-9mm}
 \end{figure}
 
 For instance, Figure \ref{fig:taskModel} shows a nonprimitive ``Prepare Panels''
 goal which contains three primitive goals. These primitive goals do not have any
-temporal constraint between them. Therefore, if the ``Prepare Panels'' is
-\textit{live}, its primitive goals can be pursued by the responsible agent. In
-this example, the robot is responsible for all of these three primiitive goals.
-According to the collaboration mechanism in our overall framework, the ``Check
-Connector'' primitive is in focus (top of the discourse segment stack),
-therefore it is the most expected goal to be pursued by the robot. However,
-there are two other primitive \textit{live} goals that the robot can pursue
-them. If everything goes based on the plan, the robot will pursue the ``Check
-Connector'' goal as the most expected one, but what if the astronaut asks the
-robot to skip cheking the connector, since she wants to do it? Now, the robot
-requires to choose between the other two goals. And, what if the astronaut fails
-to check the connector and becomes furstrated while the robot has already
-achieved the other two goals? How does the robot need to respond to the
-astronaut's negative emotion? or any emotion?
+temporal constraint between them. Therefore, if the ``Prepare Panels'' is live,
+its primitive goals can be pursued by the responsible agent. In this example,
+the astronaut is responsible for the first primitive goal ``Check Connector'',
+and the robot is responsible for the next two primitive goals. According to the
+collaboration mechanism in our overall framework, the ``Check Connector''
+primitive is in focus, and the astronaut is pursuing this goal. Suddenly, the
+astronaut tells the robot that the connector is broken and she is
+\textit{worried} about the failure of the overall goal. The robot perceives and
+interprets astronaut's negative emotion using reverse appraisal (the details
+about reverse appraisal process in our framework is beyond the scope of this
+paper). Then, the robot evaluates the cost function for the current and the live
+goals. The astronaut's negative emotion increases the cost of pursuing the
+current goal, and also affects two other primitive live goals under the same
+parent. Therefore, the robot instead of insisting on pursuing the same blocked
+goal which has caused the astronaut's negative emotion, acknowledges the
+astronaut's emotion to be able to choose one of the live goals later at the
+right time. Robot's behavior mitigates the astronaut negative emotion helping
+the robot to pursue another live goal ``Coonect Adaptor" which has a lower cost
+with respect to the collaboration status. The details about the robot's behavior
+is beyond the scope of this paper.
 
 Equation \ref{eqn:cost} shows our general cost function we use to calculate the
 cost of each individual potential goal. The base in the equation is considered
@@ -554,32 +555,67 @@ goals. For instance, for the active goal that the astronuat was frustrated for,
 the $D_r$ can be a positive value (depending on the self's desirability
 appraisal function), and $R_r$ can be 1, since the active goal is
 \textit{relevant} for the robot. These values will change for the other live
-goals.
+goals depending on how \textit{relevant} they are with respect to the
+collaboration status. Finally, $C\in[1,\infty]$ is a constant used to control the
+influence of affect on cost value and it has negative sign since the
+\textit{undesirablity} (negative values) should increase the cost, and
+$\alpha\in[1,\infty]$ is also another constant to control the importance of
+reverse appraisal for the cost function.
 
 \vspace*{-3mm}
 \begin{equation}
-Cost(g) = \left(\frac{P(g)\times D(g)}{S(g)+1}\right)^{-C[(R_r+1)D_r +
+Cost(g) = \left(\frac{P(g)\times D(g)}{S(g)+1}\right)^{-C[(R_r+1)D_r + \alpha
 (R_h+1)D_h]}
 \label{eqn:cost}
 \end{equation}
 
-\vspace*{-1mm}
+The \textit{proximity} of a goal indicates how far the goal is from the current
+active goal in the shared plan. It is calculated by the distance function
+(Equation \ref{eqn:proximity}) which returns the number of edges between the
+current active goal $g_{_{act}}$, and the given goal $g$ in the shared plan.
+
+\vspace*{-3mm}
 \begin{equation}
 P(g) =  distance(g_{_{act}},g)
 \label{eqn:proximity}
 \end{equation}
 
+The \textit{difficulty} of a goal is a function of three parameters (Equation
+\ref{eqn:difficulty}) which consider the difficulty based on a) topology of the
+shared plan tree (domain independent), and b) the amount of effort required to
+pursue a given goal (domain dependent). The $\sum pred_e(g)$ is the sum of
+efforts that all the \textit{predecessors} of a given goal $g$ require to be
+achieved. The $\sum desc_e(g)$ is the sum of efforts that all the
+\textit{descendants} of a given goal $g$ require to be achieved. The effort
+values represent the amount of effort for the goals with respect to the domain.
+The $H(g)$ is the height of the given goal $g$ and it is important since a goal
+with higher height value (longest path from the goal to a leaf; a primitive
+goal) makes the collaboration more difficult than the goal with shorter height.
+
 \vspace*{-5mm}
 \begin{equation}
-D(g) = \left[H(g)+1\right]\times\left[\sum\limits_{m=0}^{M} pred_e(g) +
+D(g) = \Big(H(g)+1\Big)\times\left[\sum\limits_{m=0}^{M} pred_e(g) +
 \sum\limits_{n=0}^{N} desc_e(g)\right]
 \label{eqn:difficulty}
 \end{equation}
 
+The \textit{specificity} of a goal is the function of \textit{depth} (distcance
+from the root) and \textit{degree} (number of children) of a given goal $g$. The
+first number primitive goal (root) is the least specific goal, and the
+primitives (leaves) are the most specific goals.
+
+\vspace*{-2mm}
 \begin{equation}
 S(g) = \frac{depth(g)}{degree(g)+1}
 \label{eqn:specificity}
 \end{equation}
+
+The tuples below the goals in Figure \ref{fig:taskModel} indicate the cost value
+of each goal. The first number in each tuple is the cost value without the
+influence of the affetive part of the cost function, i.e., the exponent is equal
+to 1 in Equation \ref{eqn:cost}. The second number of each tuple indicates the
+value of the cost including the influence of affetive appraisal and the
+astronaut's perceived emotion.
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -676,6 +712,11 @@ S(g) = \frac{depth(g)}{degree(g)+1}
 % \fnbelowfloat command of the stfloats package.
 
 \section{Conclusion}
+
+We use our proposed cost function in our goal management algorithm to be able to
+integrate affective appraisal into the collaboration mechanism in our framework.
+We will continue to implement other parts of our framework, including action
+selection and motivation processes.
 
 % conference papers do not normally have an appendix
 

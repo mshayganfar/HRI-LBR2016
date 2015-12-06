@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  5 DEC 2015 21:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  6 DEC 2015 03:10
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -741,29 +741,31 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<figure/ActionSelection-croped.pdf, id=4, 208.78pt x 117.43875pt>
+<figure/ActionSelection-croped.pdf, id=4, 200.75pt x 85.31876pt>
 File: figure/ActionSelection-croped.pdf Graphic file (type pdf)
 
 <use figure/ActionSelection-croped.pdf>
 Package pdftex.def Info: figure/ActionSelection-croped.pdf used on input line 4
-74.
-(pdftex.def)             Requested size: 206.39685pt x 116.10521pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+73.
+(pdftex.def)             Requested size: 196.08252pt x 83.341pt.
 
-
- <./figure/ActionSelection-croped.pdf>]
-<figure/collaborationStructure-croped.pdf, id=26, 346.29375pt x 178.6675pt>
+<figure/collaborationStructure-croped.pdf, id=5, 346.29375pt x 178.6675pt>
 File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
 
 <use figure/collaborationStructure-croped.pdf>
 Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 511.
-(pdftex.def)             Requested size: 232.19843pt x 119.80473pt.
+ line 505.
+(pdftex.def)             Requested size: 227.04126pt x 117.14392pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./figure/ActionSelection-croped.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 539.
+(Font)              <7> on input line 540.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 539.
- (./MahniShayganfar-HRI2016.bbl)
+(Font)              <5> on input line 540.
+ [2 <./figure/collaborationStructure-croped.pdf>] (./MahniShayganfar-HRI2016.bb
+l)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -775,32 +777,33 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./figure/collaborationStructure-croped.pdf>] (./MahniShayganfar-HRI2016.aux
-) ) 
+[3
+
+] (./MahniShayganfar-HRI2016.aux) ) 
 Here is how much of TeX's memory you used:
- 17657 strings out of 493304
- 355789 string characters out of 6139870
- 742608 words of memory out of 5000000
- 20799 multiletter control sequences out of 15000+600000
+ 17655 strings out of 493304
+ 355730 string characters out of 6139870
+ 745607 words of memory out of 5000000
+ 20797 multiletter control sequences out of 15000+600000
  35728 words of font info for 65 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  56i,8n,59p,10428b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on MahniShayganfar-HRI2016.pdf (2 pages, 190211 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
+tmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MahniShayganfar-HRI2016.pdf (3 pages, 197866 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
