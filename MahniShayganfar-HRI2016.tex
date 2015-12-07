@@ -509,7 +509,7 @@ explored in-line as we discuss details of our cost function.
 
 \begin{figure}[tbh]
   \centering
-  \includegraphics[width=0.44\textwidth]{figure/collaborationStructure-croped.pdf}
+  \includegraphics[width=0.45\textwidth]{figure/collaborationStructure-croped.pdf}
   \vspace*{-3mm}
   \caption{{\fontsize{9}{9}\selectfont Astronaut-robot collaboraiton structure
   (shared plan).}}
@@ -522,33 +522,44 @@ cost of each potential goal. The base in the equation calculates the cost of
 pursuing any given goal. There are three different functions used to calculate
 the cost: \textit{proximity} $P(g)$, \textit{difficulty} $D(g)$, and
 \textit{specificity} $S(g)$ of a goal (see equations \ref{eqn:proximity} to
-\ref{eqn:specificity}). The exponent part of our cost function captures a) the
-influence of the human's emotional instance on the cost, and b) the influece of
-self appraisal of any given goal. $R_h\in[0,1]$ and $D_h\in[-1,1]$  are
-\textit{relevance} and \textit{desirability} values respectively, which will be
-attained based on the reverse appraisal of the human's perceived emotion. For
-instance, if the astronaut is \textit{worried}, $D_h$ is negative, e.g., -0.8
-(depending on how undesirable the event is according to reverse appraisal), and
-$R_h$ will be 1 for the active goal and its value descends to 0 for other live
-goals depending on their distance to the active goal in the shared plan (e.g.,
-0.6 and 0.4). $R_r\in[0,1]$ and $D_r\in[-1,1]$ are also \textit{relevance} and
-\textit{desirability} values, provided by the self appraisal functions for all
-of the live goals. For instance, for the active goal for which the astronuat was
-\textit{worried}, $D_r$ can be positive, e.g. 0.7 (depending on the self's
-desirability appraisal function); $R_r$ can be 1, since the active goal is \textit{relevant}
-for the robot. These values will change for the other live goals depending on
-how \textit{relevant} they are with respect to the collaboration status (e.g.,
-0.9 and 0.8). Finally, $C\in[1,\infty)$ is a constant (e.g., 2) used to control
-the influence of affect on cost value. It is negative since
-\textit{undesirablity} (negative values) should increase the cost.
-$\alpha\in[1,\infty)$ is another constant (e.g., 3) used to control the
-importance of reverse appraisal relative to self appraisal.
+\ref{eqn:specificity}). The exponent part of our cost function (Equation
+\ref{eqn:power}) captures a) the influence of the human's emotional instance on
+the cost, and b) the influece of self appraisal of any given goal. $R_h\in[0,1]$
+and $D_h\in[-1,1]$ are \textit{relevance} and \textit{desirability} values
+respectively, which will be attained based on the reverse appraisal of the
+human's perceived emotion. For instance, if the astronaut is \textit{worried},
+$D_h$ is negative, e.g., -0.8 (depending on how undesirable the event is
+according to reverse appraisal), and $R_h$ will be 1 for the active goal and its
+value descends to 0 for other live goals depending on their distance to the
+active goal in the shared plan (e.g., 0.6 and 0.5). $R_r\in[0,1]$ and
+$D_r\in[-1,1]$ are also \textit{relevance} and \textit{desirability} values,
+provided by the self appraisal functions for all of the live goals. For
+instance, for the active goal for which the astronuat was \textit{worried},
+$D_r$ can be positive, e.g. 0.7 (depending on the self's desirability appraisal
+function); $R_r$ can be 1, since the active goal is \textit{relevant} for the
+robot. These values will change for the other live goals depending on how
+\textit{relevant} they are with respect to the collaboration status (e.g., 0.9
+and 0.8). Finally, $C\in[1,\infty)$ is a constant (e.g., 2) used to control the
+influence of affect on cost value. It is negative since \textit{undesirablity}
+(negative values) should increase the cost. $\alpha\in[1,\infty)$ is another
+constant (e.g., 3) used to control the importance of reverse appraisal relative
+to self appraisal.
+
+\vspace*{-3mm}
+\begin{equation}
+{\fontsize{6}{9}\selectfont Cost(g) =
+\big(\omega_0.P(g)+\omega_1.D(g)+\omega_2.S(g)\big)}^{\Gamma}
+\label{eqn:cost}
+\vspace*{-2mm}
+\end{equation}
+
+\noindent For simplicity, we assume equal values for the weights: $\omega_i$=1.
 
 \vspace*{-4mm}
 \begin{equation}
-Cost(g) = \left(\frac{P(g)\times D(g)}{S(g)+1}\right)^{-C[(R_r+1)D_r + \alpha
-(R_h+1)D_h]}
-\label{eqn:cost}
+\Gamma=-C[(R_r+1)D_r + \alpha(R_h+1)D_h]
+\label{eqn:power}
+\vspace*{-2mm}
 \end{equation}
 
 The \textit{proximity} of a goal indicates how far the goal is from the current
@@ -560,7 +571,7 @@ goals.
 
 \vspace*{-3mm}
 \begin{equation}
-P(g) =  distance(g_{_{act}},g)
+P(g) = max\big\{1, distance(g_{_{act}},g)\big\}
 \label{eqn:proximity}
 \vspace*{-2mm}
 \end{equation}
@@ -600,22 +611,23 @@ S(g) = \frac{depth(g)}{degree(g)+1}
 
 \vspace*{-1mm}
 The tuples below the goals in Figure \ref{fig:taskModel} indicate the cost value
-of each goal. The first number in each tuple is the cost value without the
-influence of the affective part of the cost function, i.e., the exponent is
-equal to 1 in Equation \ref{eqn:cost}. The second number of each tuple indicates
-the value of the cost including the influence of affective appraisal and the
-astronaut's perceived emotion.
+of each goal. The first number in each tuple is the normalized cost value
+without the influence of the affective part of the cost function, i.e., the
+exponent is equal to 1 in Equation \ref{eqn:cost}. The second number of each
+tuple indicates the normalized value of the cost including the influence of
+affective appraisal and the astronaut's perceived emotion.
 
 Based on our cost function, the cost of completing the primitive goal ``Check
-Connector'' is ??? (see Figure \ref{fig:taskModel}). As shown, when affect is
-not considered the cost is ???; the negative emotion of the astronaut
+Connector'' is 0.81 (see Figure \ref{fig:taskModel}). As shown, when affect is
+not considered the cost is 0.28; the negative emotion of the astronaut
 (worriedness) significantly increases the cost of the current goal, and also
 impacts the other two primitive live goals under the same parent. Therefore,
 instead of insisting on pursuing the same blocked goal which has caused the
 astronaut's negative emotion, the robot can mitigate the astronaut's emotions by
-acknowledging her worriedness. The robot shifts the focus of attention to ??? to
-mainatain progress and prevent failure of the collaboration. The details about
-the robot's behavior is beyond the scope of this paper.
+acknowledging her worriedness. The robot shifts the focus of attention to
+``Connect Adaptor'' to mainatain progress and prevent failure of the
+collaboration. The details about the robot's behavior is beyond the scope of
+this paper.
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -711,7 +723,7 @@ the robot's behavior is beyond the scope of this paper.
 % footnotes above bottom floats. This can be corrected via the
 % \fnbelowfloat command of the stfloats package.
 
-\vspace*{-4mm}
+\vspace*{-3mm}
 \section{Conclusion}
 \vspace*{-1mm}
 We use our proposed cost function in our goal management algorithm to be able to
