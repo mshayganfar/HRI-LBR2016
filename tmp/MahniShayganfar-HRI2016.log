@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  7 DEC 2015 11:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  7 DEC 2015 19:29
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -669,18 +669,18 @@ Package: xparse 2013/12/31 v4634 L3 Experimental document command parser
 (./MahniShayganfar-HRI2016.aux)
 \openout1 = `MahniShayganfar-HRI2016.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 318.
-LaTeX Font Info:    ... okay on input line 318.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 318.
-LaTeX Font Info:    ... okay on input line 318.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 318.
-LaTeX Font Info:    ... okay on input line 318.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 318.
-LaTeX Font Info:    ... okay on input line 318.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 318.
-LaTeX Font Info:    ... okay on input line 318.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 318.
-LaTeX Font Info:    ... okay on input line 318.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 -- Lines per column: 56 (exact).
 ABD: EveryShipout initializing macros
@@ -745,31 +745,29 @@ e
 File: figure/ActionSelection-croped.pdf Graphic file (type pdf)
 
 <use figure/ActionSelection-croped.pdf>
-Package pdftex.def Info: figure/ActionSelection-croped.pdf used on input line 4
-61.
+Package pdftex.def Info: figure/ActionSelection-croped.pdf used on input line 8
+0.
 (pdftex.def)             Requested size: 196.08252pt x 83.341pt.
 
-<figure/collaborationStructure-croped.pdf, id=5, 356.33125pt x 172.645pt>
+<figure/collaborationStructure-croped.pdf, id=5, 356.33125pt x 174.6525pt>
 File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
 
 <use figure/collaborationStructure-croped.pdf>
 Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 512.
-(pdftex.def)             Requested size: 239.93811pt x 116.25108pt.
+ line 130.
+(pdftex.def)             Requested size: 247.6778pt x 121.39513pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 523.
+(Font)              <7> on input line 141.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 523.
-
-Underfull \vbox (badness 1383) has occurred while \output is active []
-
+(Font)              <5> on input line 141.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./figure/ActionSelection-croped.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 551.
- (./MahniShayganfar-HRI2016.bbl)
+(Font)              <6> on input line 147.
+
+(./MahniShayganfar-HRI2016.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -785,8 +783,8 @@ Before submitting the final camera ready copy, remember to:
 ) ) 
 Here is how much of TeX's memory you used:
  17664 strings out of 493304
- 355823 string characters out of 6139870
- 746608 words of memory out of 5000000
+ 355823 string characters out of 6139871
+ 744608 words of memory out of 5000000
  20803 multiletter control sequences out of 15000+600000
  37146 words of font info for 69 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
@@ -802,7 +800,7 @@ amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MahniShayganfar-HRI2016.pdf (2 pages, 191341 bytes).
+Output written on MahniShayganfar-HRI2016.pdf (2 pages, 190171 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
