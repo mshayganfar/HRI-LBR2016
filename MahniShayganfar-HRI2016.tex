@@ -102,7 +102,7 @@ appraisal variable. The vector containing these appraisal variables can be
 mapped to a particular emotion instance at each point in time. However, it is
 not the actual emotion instance that is important for us. In fact, it is a) the
 functions of emotions in a social setting, i.e., goal management, and b) the
-meaning of the collabrator's perceived emotion in collaboration context.
+meaning of the collaborator's perceived emotion in collaboration context.
 
 A collaboration structure provides a hierarchy and constraints of the shared
 goals in the form of a shared plan (Fig. \ref{fig:taskModel}) which contains
@@ -116,7 +116,7 @@ between a set of live goals. We believe appraisal processes are crucial to
 choose between the available live goals; since the appraisals are the immediate
 outcome of the robot's assessment of the collaboration environment.
 
-For instance, Fig. \ref{fig:taskModel} shows a nonprimitive ``Prepare Panels''
+For instance, Fig. \ref{fig:taskModel} shows a non-primitive ``Prepare Panels''
 goal decomposed into three primitive goals. Therefore, if ``Prepare Panels'' is
 live, its primitive goals can be pursued by the responsible agent. In our
 example, the astronaut is responsible for the ``Check Connector'' goal; the
@@ -178,7 +178,7 @@ function); $R_r$ can be 1, since the active goal is relevant for the robot.
 These values will change for the other live goals depending on how
 relevant they are with respect to the collaboration status (e.g., 0.9 and 0.8).
 Finally, $C\in[1,\infty)$ is a constant (e.g., 2) used to control the influence
-of affect on cost value. It is negative since undesirablity (negative values)
+of affect on cost value. It is negative since undesirability (negative values)
 should increase the cost. $\alpha\in[1,\infty)$ is another constant (e.g., 3)
 used to control the importance of reverse appraisal relative to self appraisal.
 
@@ -218,7 +218,7 @@ D(g) = \Big(H(g)+1\Big)\times\left[\sum\limits_{m=0}^{M} pred_e(g) +
 
 The \textit{specificity} of a goal is the function of \textit{depth} (distance
 from the root) and \textit{degree} (number of children) of a given goal $g$. The
-first number primitive goal (root) is the least specific goal, and the
+first non-primitive goal (root) is the least specific goal, and the
 primitives (leaves) are the most specific goals. As calculated based on Fig.
 \ref{fig:taskModel}, the values of $S(g)$ for the three primitives under the
 ``Prepare Panels'' are 2.
