@@ -14,18 +14,18 @@
 
 \begin{document}
 
-\title{{\fontsize{19}{20}\selectfont Impact of Affective Appraisal on
-Collaborative Goal Management:\\My Robot Shares My Worries}}
+\title{{\fontsize{19}{20}\selectfont Impact of Affective Appraisal
+on Collaborative Goal Management:\\My Robot Shares My Worries}\vspace*{-5mm}}
 
-% \author{\IEEEauthorblockN{Mahni Shayganfar and Charles Rich and Candace
-% L. Sidner} 
-% \IEEEauthorblockA{Fuller Laboratories\\
-% Computer Science Department\\
-% Worcester Polytechnic Institute\\
-% Worcester, Massachusetts 01609-2280\\
-% mshayganfar $|$ rich $|$ sidner@wpi.edu}}
+ \author{\IEEEauthorblockN{Mahni Shayganfar and Charles Rich and
+ Candace L. Sidner} 
+ \IEEEauthorblockA{Computer Science Department,
+ Worcester Polytechnic Institute\\
+ 100 Institute Road, Worcester, Massachusetts 01609-2280\\
+ +1 (508) 831-5000\\
+ \{mshayganfar , rich , sidner\}@wpi.edu}\vspace*{-10mm}}
 
-\author{Anonymous}
+%\author{Anonymous}
 
 \maketitle
 
@@ -87,22 +87,19 @@ the reciprocal influence of appraisal on a collaboration structure (see Fig.
   \vspace*{-7mm}
 \end{figure}
 
-We have investigated the influence of a collaboration structure on
-appraisal processes, and implemented distinct algorithms for different
-appraisal processes for a collaborative robot \cite{shayganfar:appraisal}.
-According to the appraisal theory, the outcome of these processes are separable
-antecedents of emotion with which the robot evaluates the environment. Our
-appraisal variables included: a) \textit{relevance} to measure the significance
-of an event for the robot, b) \textit{desirability} to characterize the value of
-an event to the robot in terms of whether the event facilitates or thwarts the
-collaboration goal, c) \textit{expectedness} and d) \textit{controllability}
-(these last two appraisal variables are beyond the scope of this paper). The
-outcome of each appraisal process is a specific value for the corresponding
-appraisal variable. The vector containing these appraisal variables can be
-mapped to a particular emotion instance at each point in time. However, it is
-not the actual emotion instance that is important for us. In fact, it is a) the
-functions of emotions in a social setting, i.e., goal management, and b) the
-meaning of the collaborator's perceived emotion in collaboration context.
+Appraisals are separable antecedents of emotion with which the robot
+evaluates the environment. Our appraisal variables included: a)
+\textit{relevance} to measure the significance of an event for the robot, b)
+\textit{desirability} to characterize the value of an event to the robot in
+terms of whether the event facilitates or thwarts the collaboration goal, c)
+\textit{expectedness} and d) \textit{controllability} (these last two appraisal
+variables are beyond the scope of this paper). The outcome of each appraisal
+process is a specific value for the corresponding appraisal variable. The vector
+containing these appraisal variables can be mapped to a particular emotion
+instance at each point in time. However, it is not the actual emotion instance
+that is important for us. In fact, it is a) the functions of emotions in a
+social setting, i.e., goal management, and b) the meaning of the collaborator's
+perceived emotion in collaboration context.
 
 A collaboration structure provides a hierarchy and constraints of the shared
 goals in the form of a shared plan (Fig. \ref{fig:taskModel}) which contains
@@ -129,12 +126,13 @@ explored below as we discuss details of our cost function.
 
 \begin{figure}[tbh]
   \centering
+  \vspace*{-1mm}
   \includegraphics[width=0.48\textwidth]{figure/collaborationStructure-croped.pdf}
   \vspace*{-3mm}
   \caption{{\fontsize{9}{9}\selectfont Astronaut-robot collaboration structure
   (shared plan).}}
   \label{fig:taskModel}
-  \vspace*{-5mm}
+  \vspace*{-3mm}
 \end{figure}
 
 Equation \ref{eqn:cost} shows the function to calculate the cost of each
@@ -148,12 +146,12 @@ $S(g)$ (see equations \ref{eqn:proximity} to \ref{eqn:specificity}).
 {\fontsize{6}{9}\selectfont Cost(g) =
 \big(\omega_0.P(g)+\omega_1.D(g)+\omega_2.\frac{1}{S(g)+1}\big)}^{\Gamma}
 \label{eqn:cost}
-\vspace*{-2mm}
+\vspace*{-1mm}
 \end{equation}
 
 \noindent For simplicity, we assume equal values for the weights: $\omega_i$=1.
 
-\vspace*{-3mm}
+\vspace*{-2mm}
 \begin{equation}
 \Gamma=-C[(R_r+1)D_r + \alpha(R_h+1)D_h]
 \label{eqn:power}
@@ -193,7 +191,7 @@ goals.
 \begin{equation}
 P(g) = max\big\{1, distance(g_{_{act}},g)\big\}
 \label{eqn:proximity}
-\vspace*{-2mm}
+\vspace*{-1mm}
 \end{equation}
 
 The \textit{difficulty} of a goal is a function of three parameters (Equation
@@ -213,7 +211,6 @@ our example.
 D(g) = \Big(H(g)+1\Big)\times\left[\sum\limits_{m=0}^{M} pred_e(g) +
 \sum\limits_{n=0}^{N} desc_e(g)\right]
 \label{eqn:difficulty}
-\vspace*{-1mm}
 \end{equation}
 
 The \textit{specificity} of a goal is the function of \textit{depth} (distance
