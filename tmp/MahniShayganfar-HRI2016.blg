@@ -11,53 +11,46 @@ Database file #1: mshayganfar.bib.bib
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty title in shayganfar:amct-symbiotic
-Warning--empty booktitle in shayganfar:amct-symbiotic
-Warning--empty year in shayganfar:amct-symbiotic
-Warning--empty title in shayganfar:appraisal
-Warning--empty booktitle in shayganfar:appraisal
-Warning--empty year in shayganfar:appraisal
 
 Done.
-You've used 4 entries,
+You've used 3 entries,
             4024 wiz_defined-function locations,
-            824 strings with 7921 characters,
-and the built_in function-call counts, 2160 in all, are:
-= -- 141
-> -- 44
+            825 strings with 8039 characters,
+and the built_in function-call counts, 2106 in all, are:
+= -- 154
+> -- 49
 < -- 13
-+ -- 24
-- -- 8
-* -- 105
-:= -- 331
++ -- 26
+- -- 9
+* -- 113
+:= -- 325
 add.period$ -- 6
-call.type$ -- 4
-change.case$ -- 2
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 30
-cite$ -- 10
-duplicate$ -- 170
-empty$ -- 210
-format.name$ -- 10
-if$ -- 474
+cite$ -- 3
+duplicate$ -- 152
+empty$ -- 186
+format.name$ -- 12
+if$ -- 468
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 27
-newline$ -- 35
-num.names$ -- 4
-pop$ -- 80
+int.to.str$ -- 3
+missing$ -- 28
+newline$ -- 32
+num.names$ -- 3
+pop$ -- 70
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 167
+skip$ -- 161
 stack$ -- 0
-substring$ -- 72
-swap$ -- 104
+substring$ -- 73
+swap$ -- 110
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 4
-warning$ -- 6
-while$ -- 8
-width$ -- 5
-write$ -- 51
-(There were 6 warnings)
+type$ -- 3
+warning$ -- 0
+while$ -- 7
+width$ -- 4
+write$ -- 49
